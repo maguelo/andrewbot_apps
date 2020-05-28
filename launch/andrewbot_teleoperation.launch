@@ -1,5 +1,5 @@
 <launch>
-    <node pkg="andrewbot_base" type="andrewbot_base_control" name="andrewbot_base_control"/>
-    <node pkg="andrewbot_apps" type="remote_control_ps4" name="remote_control_ps4"/>
+    <node pkg="andrewbot_base" type="andrewbot_base_control.py" name="andrewbot_base_control"/>
+    <node pkg="andrewbot_apps" type="remote_control_ps4.py" name="remote_control_ps4"/>
 
 </launch>
