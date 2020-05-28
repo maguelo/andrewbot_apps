@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="andrewbot_base" type="andrewbot_base" name="andrewbot_base_control"/>
+    <node pkg="andrewbot_base" type="andrewbot_apps" name="andrewbot_base_control"/>
+
+</launch>
