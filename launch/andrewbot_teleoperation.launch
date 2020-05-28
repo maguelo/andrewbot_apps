@@ -1,5 +1,5 @@
 <launch>
     <node pkg="andrewbot_base" type="andrewbot_base_control.py" name="andrewbot_base_control"/>
     <node pkg="andrewbot_apps" type="remote_control_ps4.py" name="remote_control_ps4"/>
-
+    <node pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0" name="serial_node_base"/>
 </launch>
