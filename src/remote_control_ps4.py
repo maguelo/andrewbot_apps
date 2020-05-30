@@ -23,7 +23,6 @@ def move_base(joy_data):
     y = joy_data.axes[BASE_VERTICAL]
 
     base_movement.linear.x, base_movement.angular.z = translate_point_to_twist(x, y)
-    base_motion_pub.publish(base_movement)
 
 def joy_data_callback(joy_data):
     move_base(joy_data)
@@ -40,7 +39,7 @@ if __name__ == '__main__':
         
         rate = rospy.Rate(100)  # 10ms    100
         while not rospy.is_shutdown():
-            #base_motion_pub.publish(base_movement)
+            base_motion_pub.publish(base_movement)
             rate.sleep()
             
     except rospy.ROSInterruptException:
