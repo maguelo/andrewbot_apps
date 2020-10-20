@@ -3,5 +3,7 @@
     <node pkg="andrewbot_robot" type="andrewbot_base_control.py" name="andrewbot_base_control"/>
     <node pkg="andrewbot_robot" type="andrewbot_servos_control.py" name="andrewbot_servos_control"/>
     <node pkg="andrewbot_apps" type="remote_control_ps4.py" name="remote_control_ps4"/>
-    <node pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0" name="serial_node_base"/>
+    <!--<node pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0" name="serial_python"/>-->
+    <!--rosrun rosserial_server serial_node _port:=/dev/ttyACM0-->
+    <!--node pkg="rosserial_server" type="serial_node" args="_port:=/dev/ttyACM0" name="serial_server"/-->
 </launch>

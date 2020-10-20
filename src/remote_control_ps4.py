@@ -3,7 +3,7 @@ import rospy
 import math
 from sensor_msgs.msg import Joy
 
-from geometry_msgs.msg import Twist
+#from geometry_msgs.msg import Twist
 from andrewbot_utils.math_utils import translate_point_to_twist
 
 
@@ -42,7 +42,8 @@ def move_head(joy_data):
 def joy_data_callback(joy_data):
     move_base(joy_data)
     move_head(joy_data)
-    
+    base_motion_pub.publish(base_movement)
+    head_motion_pub.publish(head_movement)
     
 
 import time
@@ -53,10 +54,9 @@ if __name__ == '__main__':
         
         
         
-        rate = rospy.Rate(100)  # 10ms    100
+        rate = rospy.Rate(1000)  # 10ms    100
         while not rospy.is_shutdown():
-            base_motion_pub.publish(base_movement)
-            head_motion_pub.publish(head_movement)
+            
             rate.sleep()
             
     except rospy.ROSInterruptException:
